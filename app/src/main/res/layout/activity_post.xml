@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".activity.PostActivity">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="10dp"
+            android:padding="5dp" android:id="@+id/linearLayout">
+
+        <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/edtTitle"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp">
+
+            <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/text_title"
+                    android:textSize="14sp"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/edtBody"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp">
+
+            <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/text_post"
+                    android:minLines="2"
+                    android:maxLines="3"
+                    android:scrollbars="vertical"
+                    android:scrollbarStyle="insideInset"
+                    android:textSize="14sp"/>
+
+            <TextView
+                    android:id="@+id/txtResponse"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="16sp"
+                    android:textStyle="bold|italic"
+                    android:layout_margin="5dp"
+                    android:visibility="gone"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+            android:id="@+id/fabSend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center"
+            app:icon="@drawable/ic_android"
+            app:iconTint="@android:color/white"
+            android:text="@string/text_send"
+            android:textColor="@android:color/white"
+            android:textAllCaps="false"
+            app:backgroundTint="@color/colorPrimaryDark"
+            app:rippleColor="@android:color/white"
+            app:layout_anchorGravity="bottom|center"
+            app:layout_anchor="@+id/linearLayout"/>
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+            android:id="@+id/fabUpdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center"
+            app:icon="@drawable/ic_android"
+            app:iconTint="@android:color/white"
+            android:text="@string/text_update"
+            android:textColor="@android:color/white"
+            android:textAllCaps="false"
+            app:backgroundTint="@color/colorPrimary"
+            app:rippleColor="@android:color/white"
+            app:layout_anchorGravity="start|bottom"
+            app:layout_anchor="@+id/linearLayout"/>
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+            android:id="@+id/fabDelete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center"
+            app:icon="@drawable/ic_android"
+            app:iconTint="@android:color/white"
+            android:text="@string/text_delete"
+            android:textColor="@android:color/white"
+            android:textAllCaps="false"
+            app:backgroundTint="@color/colorAccent"
+            app:rippleColor="@android:color/white"
+            app:layout_anchorGravity="end|bottom"
+            app:layout_anchor="@+id/linearLayout"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
